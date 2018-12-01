@@ -73,8 +73,8 @@ NeoBundle 'honza/vim-snippets'
 " Dirr diff
 NeoBundle 'vim-scripts/DirDiff.vim'
 
-" Colorscheme solarazied for vim
-NeoBundle 'altercation/vim-colors-solarized'
+" Colorscheme dracula for vim
+NeoBundle 'dracula/vim'
 
 " Allow autoclose paired characters like [,] or (,),
 " and add smart cursor positioning inside it,
@@ -456,7 +456,7 @@ nmap <silent> <leader>gt :YcmCompleter GetType<CR>
 nmap <silent> <leader>gd :YcmCompleter GetDoc<CR>
 
 " Refactor smart rename, space at the end are important :)
-nmap <leader>rr :YcmCompleter RefactorRename 
+nmap <leader>rr :YcmCompleter RefactorRename
 
 "-------------------------
 " Arpeggio
@@ -467,17 +467,16 @@ call arpeggio#map('i', '', 0, 'jk', '<ESC>')
 "--------------------------------------------------
 " Colorscheme
 
-" Use solarized colorscheme
-colorscheme solarized
+" Use dracula colorscheme
+colorscheme dracula
 
 " Setting up light color scheme
-set background=light
-
-" Set highlighting for colorcolumn
-highlight ColorColumn ctermbg=lightGrey
+set background=dark
 
 "--------------------------------------------------
 " General options
+set mouse=a
+set clipboard=unnamed
 
 " Enable per-directory .vimrc files and disable unsafe commands in them
 "set exrc secure
@@ -589,7 +588,7 @@ set nostartofline
 set nowrap
 
 " Display Line numbers
-set number
+set relativenumber
 
 " Highlight line with cursor
 set cursorline
